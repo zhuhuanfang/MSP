@@ -1,0 +1,6 @@
+{
+    "PROVISIONING_HOST":"devidpsdeu1dps001.azure-devices-provisioning.net",
+    "PROVISIONING_IDSCOPE":"0ne001CF247",
+    "CERTIFICATE_FILE":"public.pem",
+    "KEY_FILE":"private.pem"
+}
