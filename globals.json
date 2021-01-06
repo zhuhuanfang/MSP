@@ -1,0 +1,104 @@
+{
+	"id": "df008b8c-b94e-46f1-834d-99740bcadc0f",
+	"values": [
+		{
+			"key": "neworganizationid",
+			"value": "新添加的组织编号",
+			"enabled": true
+		},
+		{
+			"key": "organizationid",
+			"value": "组织编号",
+			"enabled": true
+		},
+		{
+			"key": "invitationid",
+			"value": "新增的邀请编号",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "SI登录的token",
+			"enabled": true
+		},
+		{
+			"key": "customerid",
+			"value": "customer编号",
+			"enabled": true
+		},
+		{
+			"key": "sessionid",
+			"value": "会话的id",
+			"enabled": true
+		},
+		{
+			"key": "botoken",
+			"value": "BO登陆的token",
+			"enabled": true
+		},
+		{
+			"key": "sirequestid",
+			"value": "SI发起的请求编号",
+			"enabled": true
+		},
+		{
+			"key": "admintoken",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "simtoken",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "sietoken",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "sie_hash",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "sieinvitationid",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "bo_hash",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "boinvitationid",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "employeeid",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "deviceid",
+			"value": "eaac4d7f-2e9a-4c90-b5ad-434c9c521faa",
+			"enabled": true
+		},
+		{
+			"key": "sie_requestid",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "publickey",
+			"value": "-----BEGIN CERTIFICATE-----\nMIIFhjCCBG6gAwIBAgIIKvVwoDO5sgUwDQYJKoZIhvcNAQEFBQAwgfsxCzAJBgNV\nBAYTAkRFMRwwGgYDVQQIExNOb3JkcmhlaW4tV2VzdGZhbGVuMR0wGwYDVQQHExRN\ndWVsaGVpbSBhbiBkZXIgUnVocjEnMCUGA1UEChMeUTptYXJrZXRpbmcgQWt0aWVu\nZ2VzZWxsc2NoYWZ0MRgwFgYDVQQLEw9EYXRhZGV2ZWxvcG1lbnQxQzBBBgNVBAMT\nOkFCQi9CdXNjaC1KYWVnZXIgRWxla3RybyBJbnRlcm5ldCBTZXJ2aWNlIFBsYXRm\nb3JtIFJvb3QgQ0ExJzAlBgkqhkiG9w0BCQEWGGFkbWluQGRhdGFkZXZlbG9wbWVu\ndC5kZTAiGA8yMDIwMTExOTA1NDgzM1oYDzIwMjIxMTE5MDU1MzMzWjCBoDEfMB0G\nCSqGSIb3DQEJARYQQ05ERVhAQUJCLmNvbS5jbjEtMCsGA1UEAwwkZWFhYzRkN2Yt\nMmU5YS00YzkwLWI1YWQtNDM0YzljNTIxZmFhMQwwCgYDVQQLDANPSUMxDDAKBgNV\nBAoMA0FCQjERMA8GA1UEBwwIc2hlbnpoZW4xEjAQBgNVBAgMCWd1YW5nZG9uZzEL\nMAkGA1UEBhMCQ04wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClyXL0\np4a/81UMwZiTR5qXT5Fsgr/RLhM3u8STOT0Db8owZ2l9n+PtH+bnoSnBp+h/AV6z\nMAZC8QCUP4c19ElG8njjenV3IYiakqdH59+gOyZJSSaBbWPEQ/05ByE7dMli1Cxz\ntfI8OXKsp9Q8/Mjl8P4gJCQwvkIIfKqhbpWDdWDmygksdKWwnIZ4VL+fqVbblRnz\nQeKeX5745xr8C0RReGCQVxrWRebRLTQXJAPyHKC7umTPq1FumYHaWkJWMP6bbos1\nsFLsRRsRQZMT2O2+BDEZA3kU4ETliMUMm9ME2cJG1q8d/3Ok8jcNwhWSnvAAPbxK\nH/gVMBQg/AeVwNBhAgMBAAGjggFhMIIBXTAJBgNVHRMEAjAAMIIBLQYDVR0RBIIB\nJDCCASCGWGh0dHBzOi8vc3RhZ2UuYXBpLmV1Lm15YnVpbGRpbmdzLmFiYi5jb20v\nYXBpL2NsaWVudC9kNTIyNGNjOS00MWVjLTRhYWUtOTVhYS1kN2QxYTBiMThjNTCg\nMQYHKxIAAgSGD6AmEyRkNTIyNGNjOS00MWVjLTRhYWUtOTVhYS1kN2QxYTBiMThj\nNTCgVAYIKwYBBQUHCAWgSBNGZDUyMjRjYzktNDFlYy00YWFlLTk1YWEtZDdkMWEw\nYjE4YzUwQHN0YWdlLnhtcHAuZXUubXlidWlsZGluZ3MuYWJiLmNvbaAQBgRVHgFz\noAgTBkNoZW5saaApBgVVHgGBDKAgEx5jb20uYWJiLmlzcGYuY2xpZW50LmtueC1n\ndy5zZGswHwYDVR0jBBgwFoAUuY5sMPpTnHOyaX0IY5Rsmd4VgcUwDQYJKoZIhvcN\nAQEFBQADggEBAC7abZPoxEcX8rX9QT263K63kw08hSm2XUH9yYc3fR3z+YV+dzKy\n/WdZ6krbCBvxFyLrSsTzfxXVewAyXw/W1Z/ty6r7dYCxBa7TUWKlEY3b2UXfCtXT\n/IvAWbHuL5r0Wfk8NGg2nX3KKG5mkHIZU03+/cCnrnRawwn1eaIyt+5f2KTRfYxd\nzwBbTIwwLRUxQcrAXvTd7xMUnCRYM89xAd3RXldWp3Ejz8p0r9KkhtJ7g1pzAZdY\n68atbu8k/JY/cDtfSP3LcEgNZnlbpmBtGVtl2RB9fMRiTA3uFF/bNGIM/epOtPtR\n9nRRE2T9Q1I7byovHyIIv9ATQi8uDvZI7ks=\n-----END CERTIFICATE-----",
+			"enabled": true
+		}
+	],
+	"name": "ABB-OIC测试 Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2021-01-05T07:58:13.130Z",
+	"_postman_exported_using": "Postman/7.36.1"
+}
