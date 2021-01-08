@@ -28,7 +28,7 @@ var ProvisioningDeviceClient = require('azure-iot-provisioning-device').Provisio
 //读取配置文件config.json中的变量
 var provisioningHost = config["PROVISIONING_HOST"];
 var idScope = config["PROVISIONING_IDSCOPE"];
-//var registrationId = config["PROVISIONING_REGISTRATION_ID"];
+// var registrationId = config["PROVISIONING_REGISTRATION_ID"];
 
 //获取 registrationId 值
 var globals = require('./globals.json');
@@ -38,12 +38,14 @@ for (var i=0;i<globals["values"].length;i++){
     }
 };
 
-//console.log("registrationId: "+registrationId)
+console.log("registrationId: "+registrationId)
 
 var deviceCert = {
   cert: fs.readFileSync(config["CERTIFICATE_FILE"]).toString(),
   key:fs.readFileSync(config["KEY_FILE"]).toString()
 };
+
+console.log("publickey: "+deviceCert["cert"])
 
 var transport = new Transport();
 var securityClient = new X509Security(registrationId, deviceCert);
@@ -75,4 +77,3 @@ deviceClient.register(function(err, result) {
     });
   }
 });
-

@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "e4812320-1373-4316-84a9-85e6acab0064",
+		"name": "MspMainProcess",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Admin Token（获取Admin的token值）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" //获取响应的文本数据，并将其设置为全局变量admin token\r",
+							" var jsondata=pm.response.text()\r",
+							"\r",
+							"//断言返回的状态码是否是201\r",
+							" pm.test(\"status code 201 is correct\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"    pm.globals.set(\"admintoken\",jsondata);\r",
+							" })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{admin_name}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Aa88313088*",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mybuilding_url}}/user/access-token",
+					"host": [
+						"{{mybuilding_url}}"
+					],
+					"path": [
+						"user",
+						"access-token"
+					]
+				},
+				"description": "Get OAuth2 Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get SIM Token（获取SIM的token值）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" //获取响应的文本值，并将文本值设置为全局变量SIMtoken\r",
+							" var jsondata=pm.response.text()\r",
+							"\r",
+							" //断言返回的状态码是否是201\r",
+							"pm.test(\"Status code 201 is correct\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"    pm.globals.set(\"simtoken\",jsondata)\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{sim_name}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Aa88313088*",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mybuilding_url}}/user/access-token",
+					"host": [
+						"{{mybuilding_url}}"
+					],
+					"path": [
+						"user",
+						"access-token"
+					]
+				},
+				"description": "Get OAuth2 Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get SIE Token（获取SIE的token值）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" //获取响应的文本值，并将文本值设置为全局变量SIMtoken\r",
+							" var jsondata=pm.response.text()\r",
+							"\r",
+							" //断言返回的状态码是否是201\r",
+							"pm.test(\"Status code 201 is correct\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"    pm.globals.set(\"sietoken\",jsondata);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{sie_name}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Aa88313088*",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mybuilding_url}}/user/access-token",
+					"host": [
+						"{{mybuilding_url}}"
+					],
+					"path": [
+						"user",
+						"access-token"
+					]
+				},
+				"description": "Get OAuth2 Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get BO Token（获取BO的token值）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" //获取响应的文本值，并将文本值设置为全局变量SIMtoken\r",
+							" var jsondata=pm.response.text()\r",
+							" pm.globals.set(\"botoken\",jsondata)\r",
+							"\r",
+							" //断言返回的状态码是否是201\r",
+							"pm.test(\"Status code 201 is correct\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{bo_name}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Aa88313088*",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{mybuilding_url}}/user/access-token",
+					"host": [
+						"{{mybuilding_url}}"
+					],
+					"path": [
+						"user",
+						"access-token"
+					]
+				},
+				"description": "Get OAuth2 Token"
+			},
+			"response": []
+		},
+		{
+			"name": "List Employees（列出组织下所有的SIE）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 获取响应的json格式数据\r",
+							"var jsondata=pm.response.json();\r",
+							"console.log(jsondata[0].uuid);\r",
+							"\r",
+							"// 断言返回的状态码是否正确\r",
+							"pm.test(\"Status code is 200\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中是否包含uuid，如果包含，将返回的uuid的值设置成全局变量employeeid\r",
+							"pm.test(\"校验返回的信息中包含uuid\",function(){\r",
+							"    pm.expect(pm.response.text()).include(\"uuid\")\r",
+							"    pm.globals.set(\"employeeid\",jsondata[0].uuid)\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中email字段的值是否正确\r",
+							"pm.test(\"返回的信息emaile值正确\",function(){\r",
+							"    pm.expect(jsondata[0].email).eql(pm.environment.get(\"sie_email\"))\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中role字段的值是否正确\r",
+							"pm.test(\"返回的信息role值正确\",function(){\r",
+							"    pm.expect(jsondata[0].role).eql(\"employee\")\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中status字段的值是否正确\r",
+							"pm.test(\"返回的信息status值正确\",function(){\r",
+							"    pm.expect(jsondata[0].status).eql(\"active\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{simtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{stage_domain}}/organizations/{{neworganizationid}}/employees?filter={{sie_email}}",
+					"host": [
+						"{{stage_domain}}"
+					],
+					"path": [
+						"organizations",
+						"{{neworganizationid}}",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "{{sie_email}}",
+							"description": "选填（根据name, email, username进行筛选）"
+						},
+						{
+							"key": "orderBy",
+							"value": "user.email",
+							"description": "选填",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "选填，默认1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"description": "选填，默认20",
+							"disabled": true
+						}
+					]
+				},
+				"description": "List Employees"
+			},
+			"response": []
+		},
+		{
+			"name": "List Organization's Customers（列出组织下所有的BO）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 获取响应的json格式数据\r",
+							"var jsondata=pm.response.json();\r",
+							"console.log(jsondata[0].uuid);\r",
+							"\r",
+							"// 断言返回的状态码是否正确\r",
+							"pm.test(\"Status code is 200\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中是否包含uuid，如果包含，将返回的uuid的值设置成全局变量employeeid\r",
+							"pm.test(\"校验返回的信息中包含uuid\",function(){\r",
+							"    pm.expect(pm.response.text()).include(\"uuid\");\r",
+							"    pm.globals.set(\"customerid\",jsondata[0].uuid);\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中email字段的值是否正确\r",
+							"pm.test(\"返回的信息emaile值正确\",function(){\r",
+							"    pm.expect(jsondata[0].email).eql(pm.environment.get(\"bo_email\"));\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中status字段的值是否正确\r",
+							"pm.test(\"返回的信息status值正确\",function(){\r",
+							"    pm.expect(jsondata[0].status).eql(\"active\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{simtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{stage_domain}}/organizations/{{neworganizationid}}/customers?filter={{bo_email}}&orderBy=customer.user.email",
+					"host": [
+						"{{stage_domain}}"
+					],
+					"path": [
+						"organizations",
+						"{{neworganizationid}}",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "{{bo_email}}"
+						},
+						{
+							"key": "device",
+							"value": "Gateway",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "深圳",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "深圳",
+							"disabled": true
+						},
+						{
+							"key": "employee",
+							"value": "578fcb97-9dc0-4a34-8f18-23b62f1fd98e",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"disabled": true
+						},
+						{
+							"key": "includes",
+							"value": "cl",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "customer.user.email"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				},
+				"description": "List Organization's Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer's Employees （SIM更新BO所属的SIE）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 获取响应的json格式数据\r",
+							"var jsondata=pm.response.json();\r",
+							"console.log(jsondata[0].uuid);\r",
+							"\r",
+							"// 断言返回的状态码是否正确\r",
+							"pm.test(\"Status code is 200\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中uuid字段的值是否正确\r",
+							"pm.test(\"返回的信息中uui的值正确\",function(){\r",
+							"    pm.expect(jsondata[0].uuid).eql(pm.globals.get(\"employeeid\"));\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中email字段的值是否正确\r",
+							"pm.test(\"返回的信息emaile值正确\",function(){\r",
+							"    pm.expect(jsondata[0].email).eql(pm.environment.get(\"sie_email\"));\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中role字段的值是否正确\r",
+							"pm.test(\"返回的信息role值正确\",function(){\r",
+							"    pm.expect(jsondata[0].role).eql(\"employee\");\r",
+							"})\r",
+							"\r",
+							"// 断言返回的信息中status字段的值是否正确\r",
+							"pm.test(\"返回的信息status值正确\",function(){\r",
+							"    pm.expect(jsondata[0].status).eql(\"active\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{simtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"employeeUuids\": [\r\n    \"{{employeeid}}\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stage_domain}}/organizations/{{neworganizationid}}/customers/{{customerid}}/employees",
+					"host": [
+						"{{stage_domain}}"
+					],
+					"path": [
+						"organizations",
+						"{{neworganizationid}}",
+						"customers",
+						"{{customerid}}",
+						"employees"
+					]
+				},
+				"description": "Update Customer's Employees"
+			},
+			"response": []
+		},
+		{
+			"name": "SDK register(BO绑定设备)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 断言返回的状态码是否正确\r",
+							"pm.test(\"status code 201 is correct\",function(){\r",
+							"    pm.response.to.have.status(201)\r",
+							"})\r",
+							"\r",
+							"// 控制台输出deviceid的值\r",
+							"console.log(postman.getResponseHeader('X-Abb-Ispf-Uuid')+\"-eu-stage\");\r",
+							"// 将获取到的值赋值给deviceid\r",
+							"pm.globals.set(\"deviceid\",postman.getResponseHeader('X-Abb-Ispf-Uuid')+\"-eu-stage\");\r",
+							"\r",
+							"// 控制台输出响应的文本值\r",
+							"// console.log(pm.response.text())\r",
+							"// 将获取到的值赋值给deviceid\r",
+							"pm.globals.set(\"publickey\",pm.response.text());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{bo_name}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Aa88313088*",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client-type\":\"com.abb.ispf.client.knx-gw.sdk\",\r\n  \"client-name\":\"sdk123{{$timestamp}}\",\r\n  \"client-csr\":\"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0NCk1JSUNzRENDQVpnQ0FRQXdhekVMTUFrR0ExVUVCaE1DUTA0eEVqQVFCZ05WQkFnVENVZDFZVzVuWkc5dVp6RVINCk1BOEdBMVVFQnhNSVUyaGxibnBvWlc0eEVEQU9CZ05WQkFvVEIwRkNRaTFKVDBNeEN6QUpCZ05WQkFzVEFrbFUNCk1SWXdGQVlEVlFRREV3MTNkM2N1WW1GcFpIVXVZMjl0TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEENCk1JSUJDZ0tDQVFFQXVnQ0RyaG1IdGtsYk1OdDg2ZmxDMXRHSTIvZ2J3MW4ySHM0L2doYlViWHB3UEtoUTcrUDMNClNPemNtWFZxa3ZqeDNsdlVETDZjaHRjaVUxV0xocVZEeGIyTm5sZmZUQlFaNS93c1pIVHI1Ym1nSzc0OGhOK1oNClNKbUNzTUlLZUpyQUxXZEs3NVRacklFK1BKWHBqWVUzcTQreWlCalAzV0Jyc3RrSEFOK2E2dHJGaUw5UUFnam8NCjFhYkpmUnVGcE1BdnN2SjJ0a0p4K3NpaHFJVEp2c0tNYUs3T0kxTlNWOFV4a3BONXVsVFJPTjcxY09xVnpTUksNCklyL2Fxd04wMnAwRHVPUXZrazFhWVBlRHh1ZTZ0RkpIaVFnU1JVdnB0d2RHaTBWVHI3WFoyUFg2dXBJR01vcnMNCnRmWW02UWpLYm41SXh6cXh4UUtWKzR6VFVCSmREdnVQMVFJREFRQUJvQUF3RFFZSktvWklodmNOQVFFTEJRQUQNCmdnRUJBREMzMHdENmthWnltbFhzL0NSOVVYQ0pHNmhUL0llQys4K1NpRTJWMW5iVWJqT0RHcXhpWWRpc2pVeloNCkFQOHlaN2swT0J0L1dFU050OEhDQ1BvK01mWDI1R21ZZTlvTDNnYWc0QmRjVnFyTEFjZXdOWVMzVm9kMTgrc2cNCi9lTjV0YmxNK2VRTDUzOGNvMnplQVBIQUNuWXEyUE5SUWkrcENSTTZaUjVoZGFReE5HUVRzM0lOaWVVaUQxMTQNCmJUbTVKMEhFQUxGVm9Fc0d2c1o3S0h0dG1Vb0U0ZVg0UDNlMDNUL0I4MHh3NTVNdlREbytBY2h2UDYwb3dxaEsNCm9Yak5WQ3hZbGVsb3dmWnBnOGhsa3M2ZEt6emVFaDlQZlYvVWVzbkZRMm1vS21rY1RKRWtvR0ZCcEd0VHRJaVkNCjJsdWpXOVZheExUMFRNNVdhUHpjVlRyNjB6ST0NCi0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQ0K\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mybuilding_url}}/certificate/request",
+					"host": [
+						"{{mybuilding_url}}"
+					],
+					"path": [
+						"certificate",
+						"request"
+					]
+				},
+				"description": "SDK register"
+			},
+			"response": []
+		}
+	]
+}
